@@ -14,20 +14,20 @@ function App() {
 
   //essa função é chamada uma unica vez quando o componente é montado
   //uma vez que estamos passando uma lista vazia como segundo argumento
-  useEffect(() => {
-    async function fetchTasks() {
-      //simula uma chamda de API
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/todos?_limit=10",
-        { method: "GET" }
-      );
-      const data = await response.json();
-      //console.log(data);
-      setTask(data);
-    }
-    //comentando a chamada da API
-    //fetchTasks();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchTasks() {
+  //     //simula uma chamda de API
+  //     const response = await fetch(
+  //       "https://jsonplaceholder.typicode.com/todos?_limit=10",
+  //       { method: "GET" }
+  //     );
+  //     const data = await response.json();
+  //     //console.log(data);
+  //     setTask(data);
+  //   }
+  //   //comentando a chamada da API
+  //   //fetchTasks();
+  // }, []);
 
   function OnTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
